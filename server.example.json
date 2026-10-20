@@ -15,5 +15,8 @@
   "plugins": {
     "enabled": true,
     "directory": "./Data/Plugins"
+  },
+  "invitations": {
+    "friendCodes": false
   }
 }

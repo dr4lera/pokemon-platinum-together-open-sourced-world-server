@@ -2,7 +2,7 @@
   "name": "pokemon-platinum-together-open-sourced-world-server",
   "private": true,
   "type": "module",
-  "version": "0.1.0-dev.11",
+  "version": "0.1.0-dev.12",
   "engines": {
     "node": ">=24.12.0"
   },

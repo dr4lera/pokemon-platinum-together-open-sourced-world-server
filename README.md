@@ -10,13 +10,16 @@ host from a stock official client is unsupported in this preview; a user reporte
 **World not found**. Private accounts, friends and relay use the selected private
 backend. See [connection compatibility](https://github.com/dr4lera/pokemon-platinum-together-open-sourced-launcher/blob/main/PrivateServer/docs/players.md#connection-compatibility).
 
-**Development status:** This is a world backend deployment, not a finished dedicated game simulator. Native guest entry/synchronization, uninterrupted world simulation and custom story/map execution remain unfinished.
-The Node backend tests establish protocol behavior and persistence; they do not
-establish complete native gameplay. Read [verification](docs/verification.md).
+**Dev12 status:** Native gameplay, friend battles and trading are user-confirmed
+with matching prepared 0.1.7 clients on the combined backend. This separate role
+retains its role restrictions; federation and unattended native simulation remain
+unfinished. The bundle includes the updated city/appearance fixes, optional
+friend-code support where enabled, and native PTTR transport. Read
+[verification](docs/verification.md) for tested scope.
 
 ## Download
 
-**[Download the world backend hosting bundle — dev11 preview](https://github.com/dr4lera/pokemon-platinum-together-open-sourced-world-server/releases/download/v0.1.0-dev.11/PokemonPlatinumTogetherOpenSourced-WorldServer-dev11.zip)**
+**[Download the world backend hosting bundle â€” dev11 preview](https://github.com/dr4lera/pokemon-platinum-together-open-sourced-world-server/releases/download/v0.1.0-dev.11/PokemonPlatinumTogetherOpenSourced-WorldServer-dev11.zip)**
 
 The ZIP includes this deployment and its matching shared backend in sibling
 folders. Extract the whole bundle, install Node.js 24.12 or newer, then follow
@@ -87,7 +90,8 @@ Start accepts `--backend /path/to/pokemon-platinum-together-open-sourced-server`
 
 Check `http://127.0.0.1:8789/health` and `/private/server-info`. These are public
 metadata endpoints; they contain no signing seed. The role should be `world`.
-The health response intentionally reports unfinished native verification.
+Health metadata scopes native gameplay confirmation to matching 0.1.7 clients
+on the combined role; dedicated simulation remains disabled.
 
 ## Host on Linux or a VPS
 
@@ -179,3 +183,11 @@ Cross-server account federation and native world handoff remain pending.
 
 GPL-3.0-or-later for this project. Preserve the shared backend's notices and the
 original game creators' credits. No proprietary game assets are distributed here.
+
+
+## Independent-client migration
+
+Dev12 source updates are staged; the download above remains the published dev11
+preview. New releases are paused while the [source gameplay client](https://github.com/dr4lera/pokemon-platinum-together-open-sourced-client)
+is developed. Confirmed reference-client gameplay does not establish 1:1 parity
+or private-server integration in that new client.

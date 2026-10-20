@@ -48,7 +48,7 @@ test('real deployment starts with the correct role and exits after owner-signed 
    try{const response=await fetch(origin+'/private/server-info',{signal:AbortSignal.timeout(500)});info=await response.json();break;}catch{await new Promise(resolve=>setTimeout(resolve,100));}
   }
   assert.equal(info?.role,config.role);
-  assert.equal(info?.backend_revision,5);
+  assert.equal(info?.backend_revision,6);
   const health=await fetch(origin+'/health').then(r=>r.json());assert.equal(health.dedicated_simulation,false);
   const stopped=run([main,'stop-local','--profile',profile]);assert.equal(stopped.status,0,'owner-signed shutdown failed');
   assert.equal(await Promise.race([ended,new Promise((_,reject)=>setTimeout(()=>reject(new Error('Wrapper did not exit after shutdown')),5000).unref())]),0);
