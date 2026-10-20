@@ -1,0 +1,5 @@
+Data/
+server.json
+*.log
+*-result.json
+.env

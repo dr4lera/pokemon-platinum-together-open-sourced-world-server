@@ -1,0 +1,12 @@
+services:
+  world:
+    build:
+      context: ../plat-together-server
+      dockerfile: ../plat-together-world-server/Dockerfile
+    restart: unless-stopped
+    init: true
+    ports:
+      - "127.0.0.1:8789:8789"
+    volumes:
+      - ./server.json:/config/server.json:ro
+      - ./Data:/config/Data

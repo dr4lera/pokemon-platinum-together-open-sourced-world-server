@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "name": "My Co-op World Server",
+  "role": "world",
+  "data": "./Data",
+  "network": {
+    "bind": "0.0.0.0",
+    "port": 8789,
+    "publicUrl": null,
+    "trustedLoopbackProxy": false
+  },
+  "logging": {
+    "enabled": true
+  },
+  "plugins": {
+    "enabled": true,
+    "directory": "./Data/Plugins"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "plat-together-world-server",
+  "private": true,
+  "type": "module",
+  "version": "0.2.0-dev3",
+  "engines": {
+    "node": ">=24.12.0"
+  },
+  "scripts": {
+    "start": "node start.mjs",
+    "check": "node start.mjs --check"
+  }
+}
