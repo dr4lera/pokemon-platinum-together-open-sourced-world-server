@@ -19,16 +19,16 @@ friend-code support where enabled, and native PTTR transport. Read
 
 ## Download
 
-**[Download the world backend hosting bundle â€” dev11 preview](https://github.com/dr4lera/pokemon-platinum-together-open-sourced-world-server/releases/download/v0.1.0-dev.11/PokemonPlatinumTogetherOpenSourced-WorldServer-dev11.zip)**
+**[Download the world backend hosting bundle — dev12 preview](https://github.com/dr4lera/pokemon-platinum-together-open-sourced-world-server/releases/download/v0.1.0-dev.12/PokemonPlatinumTogetherOpenSourced-WorldServer-dev12.zip)**
 
 The ZIP includes this deployment and its matching shared backend in sibling
 folders. Extract the whole bundle, install Node.js 24.12 or newer, then follow
 [First run](#first-run). Keep both folders together and enroll the owner locally
 before exposing the listener.
 
-[Release notes and SHA-256 checksum](https://github.com/dr4lera/pokemon-platinum-together-open-sourced-world-server/releases/tag/v0.1.0-dev.11).
+[Release notes and SHA-256 checksum](https://github.com/dr4lera/pokemon-platinum-together-open-sourced-world-server/releases/tag/v0.1.0-dev.12).
 [All five projects and downloads](https://github.com/dr4lera/pokemon-platinum-together-open-sourced-launcher#downloads).
-The public dev11 build is the **Latest release** and remains a **development preview**.
+The public dev12 build is the **Latest release** and remains a **development preview**.
 It supplies protocol/storage services; unattended native game simulation and
 custom map/story execution remain unfinished. For player-hosted relay co-op,
 use the [combined backend guide](https://github.com/dr4lera/pokemon-platinum-together-open-sourced-launcher/blob/main/PrivateServer/docs/server-hosting.md).
@@ -187,7 +187,6 @@ original game creators' credits. No proprietary game assets are distributed here
 
 ## Independent-client migration
 
-Dev12 source updates are staged; the download above remains the published dev11
-preview. New releases are paused while the [source gameplay client](https://github.com/dr4lera/pokemon-platinum-together-open-sourced-client)
-is developed. Confirmed reference-client gameplay does not establish 1:1 parity
-or private-server integration in that new client.
+Dev12 publishes the tested revision 6 server tools. The [source gameplay client](https://github.com/dr4lera/pokemon-platinum-together-open-sourced-client)
+is developed separately; its binary releases remain paused. Confirmed reference-client
+gameplay does not establish 1:1 parity or server integration in that new client.
