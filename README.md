@@ -5,6 +5,11 @@ It runs without the Windows launcher. Use a normal Windows/Linux machine, VPS,
 dedicated server or container host supporting long-lived TCP/WebSocket processes
 and persistent writable storage. Static-site/shared PHP-only hosting will not run it.
 
+Multiplayer support targets matching project-prepared clients. Joining a project
+host from a stock official client is unsupported in this preview; a user reported
+**World not found**. Private accounts, friends and relay use the selected private
+backend. See [connection compatibility](https://github.com/dr4lera/pokemon-platinum-together-open-sourced-launcher/blob/main/PrivateServer/docs/players.md#connection-compatibility).
+
 **Development status:** This is a world backend deployment, not a finished dedicated game simulator. Native guest entry/synchronization, uninterrupted world simulation and custom story/map execution remain unfinished.
 The Node backend tests establish protocol behavior and persistence; they do not
 establish complete native gameplay. Read [verification](docs/verification.md).
