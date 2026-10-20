@@ -6,7 +6,7 @@ const root=dirname(fileURLToPath(import.meta.url)),args=process.argv.slice(2);
 const value=(key,fallback)=>{const i=args.indexOf('--'+key);return i<0?fallback:args[i+1];};
 const config=resolve(value('config',resolve(root,'server.json')));
 if(!existsSync(config))copyFileSync(resolve(root,'server.example.json'),config,constants.COPYFILE_EXCL);
-const backend=resolve(value('backend',process.env.PT_BACKEND_DIR??resolve(root,'../plat-together-server')));
+const backend=resolve(value('backend',process.env.PT_BACKEND_DIR??resolve(root,'../pokemon-platinum-together-open-sourced-server')));
 if(!existsSync(resolve(backend,'config.mjs')))throw new Error('Install the matching shared backend beside this project; see README.md.');
 const {loadConfig}=await import(pathToFileURL(resolve(backend,'config.mjs')));
 const options=loadConfig(config);

@@ -1,7 +1,7 @@
 # Server administration: bans and plugins
 
 Run these commands on the hosting machine. In the examples below, replace
-`Server/main.mjs` with `../plat-together-server/main.mjs` when running from this
+`Server/main.mjs` with `../pokemon-platinum-together-open-sourced-server/main.mjs` when running from this
 hosting repository. Administration requires the first
 account's signing key and a fresh local challenge. Remote guests cannot ban users
 or reload modules. Keep the owner profile outside public repositories.
@@ -108,5 +108,5 @@ Run from the complete portable folder:
 `--out` creates a new result file and refuses to overwrite an existing one.
 Keep owner profiles private.
 
-Source: [server and plugins](https://github.com/dr4lera/plat-together-server),
-[launcher and documentation](https://github.com/dr4lera/plat-together-open-sourced).
+Source: [server and plugins](https://github.com/dr4lera/pokemon-platinum-together-open-sourced-server),
+[launcher and documentation](https://github.com/dr4lera/pokemon-platinum-together-open-sourced-launcher).

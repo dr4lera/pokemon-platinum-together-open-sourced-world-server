@@ -1,4 +1,4 @@
-# Plat Together World Server
+# Pokemon Platinum Together Open Sourced - World Server
 
 Standalone hosting configuration for co-op realm membership, signed connections, save storage and binary forwarding.
 It runs without the Windows launcher. Use a normal Windows/Linux machine, VPS,
@@ -11,15 +11,14 @@ establish complete native gameplay. Read [verification](docs/verification.md).
 
 ## Projects
 
-- [Shared server engine](https://github.com/dr4lera/plat-together-server)
-- [Launcher, mail tool and main documentation](https://github.com/dr4lera/plat-together-open-sourced)
-- [Map Studio](https://github.com/dr4lera/plat-together-map-studio)
-- [Inverna deployment](../plat-together-inverna-server/README.md) - sibling hosting project.
+- [Shared server engine](https://github.com/dr4lera/pokemon-platinum-together-open-sourced-server)
+- [Launcher, mail tool and main documentation](https://github.com/dr4lera/pokemon-platinum-together-open-sourced-launcher)
+- [Map Studio](https://github.com/dr4lera/pokemon-platinum-together-open-sourced-editors)
+- [Inverna deployment](https://github.com/dr4lera/pokemon-platinum-together-open-sourced-inverna-server) - sibling hosting project.
 
-The hosting repositories are prepared locally; their public GitHub locations are
-not published yet. Public engine code must be updated to the matching tested
-revision before these deployment projects are released. Do not treat older
-public commits as supporting config/role separation.
+These hosting repositories are development source previews. Use the matching
+shared-engine revision; older commits may lack configuration and role separation.
+The native gameplay limitations above still apply.
 
 ## Layout and requirements
 
@@ -28,8 +27,8 @@ the shared backend and this repository as siblings:
 
 ```text
 hosting/
-  plat-together-server/         # shared backend code
-  plat-together-world-server/  # this deployment
+  pokemon-platinum-together-open-sourced-server/         # shared backend code
+  pokemon-platinum-together-open-sourced-world-server/  # this deployment
     server.example.json
     server.json                # your config, ignored by Git
     Data/                      # private identity, SQLite, plugins and saves
@@ -50,14 +49,14 @@ your actual private data through the provider's protected storage mechanism.
 5. Enroll the first owner **locally before exposing the listener**:
 
 ```sh
-node ../plat-together-server/main.mjs enroll --data ./Data --name HostName --url http://127.0.0.1:8789 --out ./Data/launcher-player.json
+node ../pokemon-platinum-together-open-sourced-server/main.mjs enroll --data ./Data --name HostName --url http://127.0.0.1:8789 --out ./Data/launcher-player.json
 node start.mjs
 ```
 
 Enrollment is once only; it refuses to overwrite an existing profile. Preserve
 that owner profile. It signs local administration requests. To keep public
 clients from reaching startup during enrollment, enroll before starting the backend.
-Start accepts `--backend /path/to/plat-together-server` and `--config /path/server.json`.
+Start accepts `--backend /path/to/pokemon-platinum-together-open-sourced-server` and `--config /path/server.json`.
 `PT_BACKEND_DIR` is another way to locate the shared engine.
 
 Check `http://127.0.0.1:8789/health` and `/private/server-info`. These are public
