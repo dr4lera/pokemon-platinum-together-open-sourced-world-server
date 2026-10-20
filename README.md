@@ -11,16 +11,16 @@ establish complete native gameplay. Read [verification](docs/verification.md).
 
 ## Download
 
-**[Download the world backend hosting bundle — dev9 preview](https://github.com/dr4lera/pokemon-platinum-together-open-sourced-world-server/releases/download/v0.1.0-dev.9/PokemonPlatinumTogetherOpenSourced-WorldServer-dev9.zip)**
+**[Download the world backend hosting bundle — dev11 preview](https://github.com/dr4lera/pokemon-platinum-together-open-sourced-world-server/releases/download/v0.1.0-dev.11/PokemonPlatinumTogetherOpenSourced-WorldServer-dev11.zip)**
 
 The ZIP includes this deployment and its matching shared backend in sibling
 folders. Extract the whole bundle, install Node.js 24.12 or newer, then follow
 [First run](#first-run). Keep both folders together and enroll the owner locally
 before exposing the listener.
 
-[Release notes and SHA-256 checksum](https://github.com/dr4lera/pokemon-platinum-together-open-sourced-world-server/releases/tag/v0.1.0-dev.9).
+[Release notes and SHA-256 checksum](https://github.com/dr4lera/pokemon-platinum-together-open-sourced-world-server/releases/tag/v0.1.0-dev.11).
 [All five projects and downloads](https://github.com/dr4lera/pokemon-platinum-together-open-sourced-launcher#downloads).
-The public dev9 build is the **Latest release** and remains a **development preview**.
+The public dev11 build is the **Latest release** and remains a **development preview**.
 It supplies protocol/storage services; unattended native game simulation and
 custom map/story execution remain unfinished. For player-hosted relay co-op,
 use the [combined backend guide](https://github.com/dr4lera/pokemon-platinum-together-open-sourced-launcher/blob/main/PrivateServer/docs/server-hosting.md).
@@ -72,6 +72,11 @@ node start.mjs
 Enrollment is once only; it refuses to overwrite an existing profile. Preserve
 that owner profile. It signs local administration requests. To keep public
 clients from reaching startup during enrollment, enroll before starting the backend.
+Use Node 24.12+; older runtimes fail with a version message. Startup rejects
+unknown, duplicate and missing-path options before touching configuration.
+`--check` reads an existing config without creating files/data or a listener;
+copy the example explicitly first. `--help` is read-only.
+
 Start accepts `--backend /path/to/pokemon-platinum-together-open-sourced-server` and `--config /path/server.json`.
 `PT_BACKEND_DIR` is another way to locate the shared engine.
 
